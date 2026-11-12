@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Empire Pulse</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar">
+        <div class="brand-wrap">
+          <div class="brand-mark">E</div>
+          <div>
+            <div class="eyebrow">Grand strategy</div>
+            <h1>Empire Pulse</h1>
+          </div>
+        </div>
+
+        <div class="turn-wrap">
+          <span class="label">Turn</span>
+          <span id="turn-counter">1</span>
+        </div>
+
+        <button id="end-turn" class="primary-btn">End Turn</button>
+      </header>
+
+      <main class="game-layout">
+        <section class="map-panel panel">
+          <div class="panel-header">
+            <h2>World Theatre</h2>
+            <span id="event-banner" class="event-banner">A fragile peace settles the region.</span>
+          </div>
+          <div id="map" aria-label="World map"></div>
+        </section>
+
+        <aside class="sidebar">
+          <section class="panel nation-panel">
+            <div class="panel-header compact">
+              <h3 id="selected-name">Lyria</h3>
+              <span id="selected-tag" class="tag player-tag">Player</span>
+            </div>
+
+            <div class="stats-grid">
+              <div class="stat-box">
+                <span class="stat-label">Power</span>
+                <strong id="power-value">0</strong>
+              </div>
+              <div class="stat-box">
+                <span class="stat-label">Industry</span>
+                <strong id="industry-value">0</strong>
+              </div>
+              <div class="stat-box">
+                <span class="stat-label">Gold</span>
+                <strong id="gold-value">0</strong>
+              </div>
+              <div class="stat-box">
+                <span class="stat-label">Manpower</span>
+                <strong id="manpower-value">0</strong>
+              </div>
+              <div class="stat-box">
+                <span class="stat-label">Tech</span>
+                <strong id="tech-value">0</strong>
+              </div>
+              <div class="stat-box">
+                <span class="stat-label">Army</span>
+                <strong id="army-value">0</strong>
+              </div>
+            </div>
+
+            <div class="summary-block">
+              <div><span>Food</span><strong id="food-value">0</strong></div>
+              <div><span>Steel</span><strong id="steel-value">0</strong></div>
+              <div><span>Energy</span><strong id="energy-value">0</strong></div>
+              <div><span>Territory</span><strong id="territory-value">0</strong></div>
+            </div>
+          </section>
+
+          <section class="panel actions-panel">
+            <h3>Command</h3>
+            <div class="button-stack">
+              <button class="action-btn" data-action="research">Research</button>
+              <button class="action-btn" data-action="mobilize">Mobilize</button>
+              <button class="action-btn" data-action="trade">Trade Deal</button>
+              <button class="action-btn" data-action="war">Launch War</button>
+              <button class="action-btn" data-action="peace">Negotiate Peace</button>
+            </div>
+          </section>
+
+          <section class="panel diplomacy-panel">
+            <h3>Diplomacy</h3>
+            <div id="relations-list" class="relations-list"></div>
+          </section>
+        </aside>
+      </main>
+
+      <section class="panel log-panel">
+        <div class="panel-header compact">
+          <h3>Strategic Log</h3>
+          <span class="log-count" id="log-count">0 entries</span>
+        </div>
+        <ul id="log-list"></ul>
+      </section>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
